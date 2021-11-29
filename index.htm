@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First CRUD</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="shadow card py-3 w-75 m-auto">
+            <div class="w-75 m-auto form-group py-3">
+                <label for="productName">productName :</label>
+                <input class=" form-control" type="text" id="productName">
+            </div>
+            <div class="w-75 m-auto form-group py-3">
+                <label for="productPrice">productPrice :</label>
+                <input class=" form-control" type="number" id="productPrice">
+            </div>
+            <div class="w-75 m-auto form-group py-3">
+                <label for="productCategory">productCategory :</label>
+                <input class=" form-control" type="text" id="productCategory">
+            </div>
+            <div class="w-75 m-auto form-group py-3">
+                <label for="productDescription">productDescription :</label>
+                <textarea class=" form-control" type="text" id="productDescription"></textarea>
+            </div>
+            <div class="w-75 mt-3 m-auto">
+                <button id="mainBtn" onclick="addProduct()" class="btn btn-info ">Add Product</button>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="container my-5">
+    <div class="py-3 w-50 m-auto">
+        <input onkeyup="search(this.value)" id="searchInput"  placeholder="Search ..." class="form-control w-50 m-auto  shadow " type="text">
+    </div>
+
+</div>
+
+
+
+<div class="mt-5">
+    <table  class=" table m-auto py-3 w-75 table-hover text-center">
+        <thead>
+            <th>index</th>
+            <th>productName</th>
+            <th>productPrice</th>
+            <th>productCategory</th>
+            <th>productDescription</th>
+            <th> <button class="btn btn-outline-warning">Update</button> </th>
+            <th><button class="btn btn-outline-danger">Delete</button></th>
+        </thead>
+        <tbody id="productsTable">
+           
+    
+        </tbody>
+    </table>
+</div>
+
+
+    
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
